@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <link rel="stylesheet" type="text/css" href="sign.css">
+<script>
+function validate()
+{ 
+var username = document.register.username.value; 
+var email = document.register.email.value;
+var password = document.register.password.value;
+var repeatpassword= document.register.repeatpassword.value;
+if (username==null || username=="")
+{ 
+alert("Name can't be blank"); 
+return false; 
+}
+else if (email==null || email=="")
+{ 
+alert("Email can't be blank"); 
+return false; 
+}
+else if(password.length&amp;lt;8)
+{ 
+alert("Password must be at least 8 characters long."); 
+return false; 
+} 
+else if (password!=reapeatpassword)
+{ 
+alert("Confirm Password should match with the Password"); 
+return false; 
+} 
+
+} 
+</script> 
+</head>
+<body>
+
+<form action="/action_page.php" style="max-width:500px;margin:auto">
+  <h2>Sign up</h2>
+  <div class="input-container">
+    <i class="fa fa-user icon"></i>
+    <input class="input-field" type="text" placeholder="Username" name="usrnm">
+  </div>
+
+  <div class="input-container">
+    <i class="fa fa-envelope icon"></i>
+    <input class="input-field" type="text" placeholder="Email" name="email">
+  </div>
+  
+  <div class="input-container">
+    <i class="fa fa-key icon"></i>
+    <input class="input-field" type="password" placeholder="Password" name="psw">
+  </div>
+  
+  <div class="input-container">
+    <i class="fa fa-key icon"></i>
+    <input class="input-field" type="password" placeholder="Repeate password" name="psww">
+  </div>
+  
+  <div class="input-container">
+    <i class="fa fa-phone number icon"></i>
+    <input class="input-field" type="Phone number" placeholder="number" name="num">
+  </div>
+  
+  <div class="input-container">
+    <i class="fa fa-home icon"></i>
+    <input class="input-field" type="Address" placeholder="Address" name="add">
+  </div>
+
+
+  <button type="submit" class="btn">Sign up</button>
+</form>
+
+</body>
+</html>
